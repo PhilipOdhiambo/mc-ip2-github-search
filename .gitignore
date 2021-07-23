@@ -11,7 +11,7 @@
 /node_modules
 
 # environment
-src/environment/environment.ts
+/src/environment/environment.ts
 
 # profiling files
 chrome-profiler-events*.json
