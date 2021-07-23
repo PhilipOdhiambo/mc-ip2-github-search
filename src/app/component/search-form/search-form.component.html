@@ -1,1 +1,8 @@
-<form action=""></form>
+<form (ngSubmit)="onSubmit(search)">
+    <mat-form-field appearanc="fill">
+        <mat-label>Github user name: </mat-label>
+        <input #search matInput placeholder="Ex. Pizza">
+    </mat-form-field>
+
+    <button mat-button color="primary">Search</button>
+</form>
