@@ -11,7 +11,9 @@ export class GithubUserComponent implements OnInit {
   constructor(private githubService:GithubService) { }
 
   ngOnInit(): void {
-    this.githubService.getUser().subscribe(user => console.log(user))
+    let user = this.githubService.getUser()
+    console.log(user);
+
   }
 
 }
