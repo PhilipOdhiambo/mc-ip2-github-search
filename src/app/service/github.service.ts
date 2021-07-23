@@ -10,8 +10,8 @@ export class GithubService {
   constructor(private http:HttpClient) {
   }
 
-  // getUser() {
-  //   let url = `https://api.github.com/users/daneden?access_token=${environment.apiKey}`
-  //   return this.http.get(url)
-  // }
+  getUser() {
+    let url = `https://api.github.com/users/daneden?access_token=${environment.apiKey}`
+    return this.http.get(url)
+  }
 }
