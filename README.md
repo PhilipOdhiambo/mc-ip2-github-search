@@ -1,27 +1,57 @@
-# McIp2GithubSearch
+# GITHUB SEARCH
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
+#### Get github users and their repos.
 
-## Development server
+## Author
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#### PHILIP ODHIAMBO
 
-## Code scaffolding
+## Description
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This app gives an interface where one can search github users by their names and get back the user information. This is achieved by exposing github API endpoints.
 
-## Build
+Your can click user's repo link to be directed to a list of their repository
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Live Demo
 
-## Running unit tests
+You can check the complete app [here](https://philipodhiambo.github.io/mc-ip2-github-search).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Technologies Used
+This app was built using the following technologies:
 
-## Running end-to-end tests
+- Angular Framework
+- Angular Material
+-HTML and CSS
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+## Bugs
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+There are no known bugs. Kindly report to the developer email incase you find any
+
+## Installation Instruction
+
+To get the app install on your machine follow these steps:
+1. Ensure you have installed the latest stable release LTS of node
+1. Ensure angular CLI is installed
+1. Navigate to the directory you want to install the project
+1. On the command prompt or terminal run the commad
+
+    ```
+    git clone https://philipodhiambo.github.com/mc-ip2-github-search.git
+    ```
+1. Enter into the cloned project using command `` cd mc-ip1-quotes``
+
+1. run ``` npm install ``` to install node modules
+
+1.  Next fire angular local server by running ``` ng serve --open ```
+
+## CONTACT AND SUPPORT
+In case of bugs, collaboration or support, please contact me through email: *jofonowino@gmail.com*
+
+## Licence
+
+This work is protected under [MIT LICENCE](LICENCE).
+
+>>COPYRIGHT &copy; PHILIP OWINO 2021
+
+
