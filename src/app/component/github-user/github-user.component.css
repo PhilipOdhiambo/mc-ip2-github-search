@@ -18,3 +18,7 @@
 .grid-item-users {
     border-right: 1px solid gray;
 }
+
+li:hover {
+    cursor: pointer;
+}

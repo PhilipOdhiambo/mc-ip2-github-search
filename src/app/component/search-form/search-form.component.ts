@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { IGithubUser } from 'src/app/interface/github-user';
+import { IGithubUserRepo } from 'src/app/interface/github-user-repos';
 import { GithubUser } from 'src/app/model/github-user';
 import { GithubService } from 'src/app/service/github.service';
 
@@ -28,14 +29,10 @@ export class SearchFormComponent implements OnInit {
         updated_at: user.updated_at
       })
 
-      this.myform.resetForm()
-
-      
-  
       this.githubService.users.push(newUser)
-      // this.githubService.getUserRepos(this.user.reposUrl).subscribe((repos:IGithubUserRepo[]) => {
-    
-      // })
+
+      this.myform.resetForm()      
+  
       
     }, err => {
 

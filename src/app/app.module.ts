@@ -12,6 +12,7 @@ import { GithubUserComponent } from './component/github-user/github-user.compone
 import { RepoComponent } from './component/repo/repo.component';
 import { SearchFormComponent } from './component/search-form/search-form.component';
 import { NavComponent } from './component/nav/nav.component';
+import { UserDetailComponent } from './component/user-detail/user-detail.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NavComponent } from './component/nav/nav.component';
     GithubUserComponent,
     RepoComponent,
     SearchFormComponent,
-    NavComponent
+    NavComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,

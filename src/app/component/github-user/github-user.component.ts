@@ -7,9 +7,15 @@ import { GithubService } from 'src/app/service/github.service';
   styleUrls: ['./github-user.component.css']
 })
 export class GithubUserComponent implements OnInit {
-  users:any
+  users!:Array<any>
+  activeUser:any
 
   constructor(private githubService:GithubService) { }
+
+  updateActiveUser(index:number) {
+    this.activeUser = this.users[index]
+
+  }
 
   ngOnInit(): void {
 
