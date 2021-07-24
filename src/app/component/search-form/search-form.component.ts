@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { IGithubUser } from 'src/app/interface/github-user';
 import { GithubUser } from 'src/app/model/github-user';
 import { GithubService } from 'src/app/service/github.service';
@@ -10,12 +11,15 @@ import { GithubService } from 'src/app/service/github.service';
 })
 export class SearchFormComponent implements OnInit {
 
-  constructor(private githubService:GithubService) { }
-  user:any
+  @ViewChild('myform')private myform!:NgForm
+  value = '';
 
-  onSubmit(search:any) {
-    this.githubService.getUser(search.value).subscribe((user:IGithubUser) => {
-      this.user = new GithubUser({
+  constructor(private githubService:GithubService) { }
+  user!:GithubUser
+
+  onSubmit() {
+    this.githubService.getUser(this.value).subscribe((user:IGithubUser) => {
+      let newUser = new GithubUser({
         avatar_url: user.avatar_url,
         created_at: user.created_at,
         login: user.login,
@@ -23,8 +27,16 @@ export class SearchFormComponent implements OnInit {
         repos_url: user.repos_url,
         updated_at: user.updated_at
       })
+
+      this.myform.resetForm()
+
       
-      console.log(this.user)
+  
+      this.githubService.users.push(newUser)
+      // this.githubService.getUserRepos(this.user.reposUrl).subscribe((repos:IGithubUserRepo[]) => {
+    
+      // })
+      
     }, err => {
 
     })         

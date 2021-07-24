@@ -1,8 +1,16 @@
-<form (ngSubmit)="onSubmit(search)">
-    <mat-form-field appearanc="fill">
-        <mat-label>Github user name: </mat-label>
-        <input #search matInput placeholder="Ex. Pizza">
-    </mat-form-field>
+<form #myform>
 
-    <button mat-button color="primary">Search</button>
+    <mat-form-field class="form-field" appearance="fill">
+        <mat-label>Github user name:</mat-label>
+
+        <input #search matInput type="text" [(ngModel)]="value" name="search">
+
+        <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+          <mat-icon>close</mat-icon>
+        </button>
+
+      </mat-form-field>
+
+      <button mat-button color="primary" (click)="onSubmit()">Search</button>
+
 </form>

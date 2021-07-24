@@ -7,11 +7,13 @@ import { GithubService } from 'src/app/service/github.service';
   styleUrls: ['./github-user.component.css']
 })
 export class GithubUserComponent implements OnInit {
+  users:any
 
   constructor(private githubService:GithubService) { }
 
   ngOnInit(): void {
 
+    this.users = this.githubService.users
 
   }
 

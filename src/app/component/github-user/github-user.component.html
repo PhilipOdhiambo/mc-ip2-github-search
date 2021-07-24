@@ -7,6 +7,14 @@
     <div class="grid-container">
         <div class="grid-item grid-item-users">
             <h3>Users List</h3>
+            <ul>
+                <li *ngFor="let user of users">
+                    <div>{{user.userName}}</div>
+                    
+                    <div>{{user.reposUrl}}</div>
+
+                </li>
+            </ul>
 
         </div>
         <div class="grid-item grid-item-user-detail">
