@@ -11,13 +11,15 @@ import { AppComponent } from './app.component';
 import { GithubUserComponent } from './component/github-user/github-user.component';
 import { RepoComponent } from './component/repo/repo.component';
 import { SearchFormComponent } from './component/search-form/search-form.component';
+import { NavComponent } from './component/nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GithubUserComponent,
     RepoComponent,
-    SearchFormComponent
+    SearchFormComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
