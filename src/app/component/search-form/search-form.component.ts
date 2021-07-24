@@ -11,7 +11,7 @@ import { GithubService } from 'src/app/service/github.service';
 })
 export class SearchFormComponent implements OnInit {
 
-  @ViewChild('myform')private myform!:NgForm
+  @ViewChild('myform') myform!:NgForm
   value = '';
 
   constructor(private githubService:GithubService) { }
