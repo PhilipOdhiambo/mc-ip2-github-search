@@ -1,12 +1,5 @@
 
 
-<!--     this.activeUser.reposUrl,
-    this.activeUser.avatarUrl,
-    this.activeUser.joined,
-    this.activeUser.lastActive,
-    this.activeUser.name,
-    this.activeUser.userName -->
-
 <mat-card class="example-card">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
@@ -23,7 +16,7 @@
 
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button>GO TO REPOS PAGE</button>
+      <button mat-button (click)="goToRepos()">GO TO REPOS PAGE</button>
     </mat-card-actions>
   </mat-card>
   

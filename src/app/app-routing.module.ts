@@ -5,7 +5,7 @@ import { RepoComponent } from './component/repo/repo.component';
 
 const routes: Routes = [
   {path:"github-users", component:GithubUserComponent},
-  { path: "github-users/user", component:RepoComponent },
+  { path: "github-users/:user", component:RepoComponent },
   { path: "**", redirectTo: "github-users", pathMatch: "full"}
 ];
 

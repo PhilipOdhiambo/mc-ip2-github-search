@@ -1,1 +1,14 @@
-<p>repo works!</p>
+
+
+<div>
+    <h2>Name: {{activeUser.userName}} </h2>
+    <ul>
+        <li *ngFor="let repo of activeUserRepos;let i=index">
+            <p>REPO NAME: {{repo.repoName}}</p>
+            <p>DESCRIPTION: {{repo.repoDescription}}</p>
+            <p>LAST UPDATE: {{repo.repoLastUpdate}}</p>
+            <a href="{{repo.repoUrl}}"> GOT TO REPOSITORY</a>
+
+        </li>
+    </ul>
+</div>

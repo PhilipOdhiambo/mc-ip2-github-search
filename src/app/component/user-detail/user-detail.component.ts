@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, AfterViewInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { GithubUser } from 'src/app/model/github-user';
 
 @Component({
@@ -9,7 +10,14 @@ import { GithubUser } from 'src/app/model/github-user';
 export class UserDetailComponent implements OnInit, AfterViewInit {
   @Input() activeUser!:GithubUser
 
-  constructor() { }
+  constructor(
+    private router:Router
+  ) { }
+
+  goToRepos() {
+    this.router.navigate(['/github-users',this.activeUser.userName])
+
+  }
 
   ngOnInit(): void {
 

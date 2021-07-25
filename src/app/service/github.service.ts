@@ -12,7 +12,7 @@ import { Repo } from '../model/repo'
 })
 export class GithubService {
 
-  public users:any
+  users:Array<GithubUser>
   repos!:Repo[]
 
   constructor(private http:HttpClient) {
@@ -22,6 +22,12 @@ export class GithubService {
   getUser(user:string):Observable<IGithubUser> {
     let url = `https://api.github.com/users/${user}?access_token=${environment.apiKey}`
     return this.http.get<IGithubUser>(url)
+  }
+
+  getActivUser(name:any) {
+    let user = this.users.filter(user => user.userName == name)
+    return user[0]
+
   }
 
   getUserRepos(userUrl:string):Observable<Array<IGithubUserRepo>> {
