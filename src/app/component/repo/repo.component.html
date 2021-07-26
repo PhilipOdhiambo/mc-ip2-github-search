@@ -1,7 +1,7 @@
 
 
 <div class="container">
-    <h1 class="mat-display-1">Name: {{activeUser.userName}} </h1>
+    <h1 appActiveUser class="mat-display-1">Name: {{activeUser.userName}} </h1>
     <div class="card-container">
         <mat-card class="card" *ngFor="let repo of activeUserRepos;let i=index">
             <p>REPO NAME: {{repo.repoName}}</p>

@@ -8,8 +8,8 @@
     <img mat-card-image src="{{activeUser.avatarUrl}}" alt="Photo of {{activeUser.userName}}">
     <mat-card-content style="text-align: center;">
     
-      <p>Date Joinng Github: {{activeUser.joined}}</p>
-      <p>Last Active Date: {{activeUser.lastActive}}</p>  
+      <p>Joined Github On: {{activeUser.joined|date:'mediumDate'}}</p>
+      <p>Last Active: {{activeUser.lastActive|time}}</p>  
       
 
     </mat-card-content>
