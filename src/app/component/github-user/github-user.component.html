@@ -3,15 +3,13 @@
 
     <app-search-form></app-search-form>
 
-    <hr>
-
     <div class="grid-container">
 
         <div class="grid-item grid-item-users">
             <h3>Users List</h3>
             <ul>
                 <li *ngFor="let user of users;let i=index" (click)="updateActiveUser(i)">
-                    <div>{{user.userName}}</div>                    
+                    <p>{{user.userName}}</p>                    
 
                 </li>
             </ul>

@@ -13,6 +13,8 @@ import { RepoComponent } from './component/repo/repo.component';
 import { SearchFormComponent } from './component/search-form/search-form.component';
 import { NavComponent } from './component/nav/nav.component';
 import { UserDetailComponent } from './component/user-detail/user-detail.component';
+import { TimePipe } from './pipes/time.pipe';
+import { ActiveUserDirective } from './directives/active-user.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { UserDetailComponent } from './component/user-detail/user-detail.compone
     RepoComponent,
     SearchFormComponent,
     NavComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    TimePipe,
+    ActiveUserDirective
   ],
   imports: [
     BrowserModule,
