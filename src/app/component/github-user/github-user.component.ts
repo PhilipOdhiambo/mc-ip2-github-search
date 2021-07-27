@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GithubUser } from 'src/app/model/github-user';
 import { GithubService } from 'src/app/service/github.service';
 
 @Component({
@@ -7,8 +8,8 @@ import { GithubService } from 'src/app/service/github.service';
   styleUrls: ['./github-user.component.css']
 })
 export class GithubUserComponent implements OnInit {
-  users!:Array<any>
-  activeUser:any
+  users!:Array<GithubUser>
+  activeUser!:GithubUser
 
   constructor(private githubService:GithubService) { }
 
@@ -22,5 +23,6 @@ export class GithubUserComponent implements OnInit {
     this.users = this.githubService.users
 
   }
+
 
 }

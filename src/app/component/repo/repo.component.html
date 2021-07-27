@@ -1,13 +1,15 @@
 
 
 <div class="container">
-    <h1 appActiveUser class="mat-display-1">Name: {{activeUser.userName}} </h1>
+    <h2>
+        <span appActiveUser matBadge="{{activeUserRepos.length}}" matBadgeOverlap="false">Repos For {{activeUser.userName}}</span>
+    </h2>
     <div class="card-container">
         <mat-card class="card" *ngFor="let repo of activeUserRepos;let i=index">
             <p>REPO NAME: {{repo.repoName}}</p>
             <p>DESCRIPTION: {{repo.repoDescription}}</p>
             <p>LAST UPDATE: {{repo.repoLastUpdate|time}}</p>
-            <a href="{{repo.repoUrl}}"> GOT TO REPOSITORY</a>
+            <a href="{{repo.repoUrl}}" target="_blank"> GOT TO REPOSITORY</a>
         </mat-card>
 
     </div>

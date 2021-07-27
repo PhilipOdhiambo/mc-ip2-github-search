@@ -13,7 +13,10 @@
             <h3 style="color: black;">Users List</h3>
             <ul>
                 <li *ngFor="let user of users;let i=index" (click)="updateActiveUser(i)">
-                    <p>{{user.userName}}</p>                    
+                    <p>
+                        {{user.userName}}
+                        <span style="padding-left: 10px;" matBadge="8" matBadgePosition="after" matBadgeOverlap="false" matBadgeColor="accent">| ReposCount</span>
+                    </p>                
 
                 </li>
             </ul>

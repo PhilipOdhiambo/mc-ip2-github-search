@@ -4,6 +4,7 @@ export interface IGithubUser {
     avatar_url:string,
     repos_url:string,
     created_at:string
-    updated_at:string
+    updated_at:string,
+    public_repos:number
 
 }

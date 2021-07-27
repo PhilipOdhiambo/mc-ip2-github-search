@@ -7,6 +7,7 @@ export class GithubUser {
     reposUrl:string
     joined: string
     lastActive:string
+    reposCount:number
 
     constructor(userInterface:IGithubUser) {
         this.avatarUrl = userInterface.avatar_url
@@ -15,6 +16,7 @@ export class GithubUser {
         this.name = userInterface.name
         this.reposUrl = userInterface.repos_url
         this.userName = userInterface.login
+        this.reposCount = userInterface.public_repos
 
     }
 }

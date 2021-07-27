@@ -9,5 +9,13 @@ body {
     margin: 0; 
     font-family: Roboto, "Helvetica Neue", sans-serif;
     background-color: azure;
+    color: #f7f7f7;
     font-size: 18px;
+        background-image: url(https://image.shutterstock.com/image-photo/wet-asphalt-reflection-neon-lights-260nw-1356837434.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card {
+    background-color: #f1f3f3;
 }

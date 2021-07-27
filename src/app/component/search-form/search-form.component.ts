@@ -19,14 +19,23 @@ export class SearchFormComponent implements OnInit {
   user!:GithubUser
 
   onSubmit() {
+    if(this.value == '') {
+      alert("You must provide user name to find !!")
+      return
+    }
     this.githubService.getUser(this.value).subscribe((user:IGithubUser) => {
+      if(user.login == 'null') {
+        alert("The user name does not exist!!")
+        return
+      }
       let newUser = new GithubUser({
         avatar_url: user.avatar_url,
         created_at: user.created_at,
         login: user.login,
         name: user.name,
         repos_url: user.repos_url,
-        updated_at: user.updated_at
+        updated_at: user.updated_at,
+        public_repos: user.public_repos
       })
 
       this.githubService.users.push(newUser)
@@ -36,7 +45,8 @@ export class SearchFormComponent implements OnInit {
       
     }, err => {
       alert("The user name does not exist!!")
-      setTimeout(()=> this.myform.resetForm() ,0)
+      this.value = ''
+      return
 
     })         
   }
