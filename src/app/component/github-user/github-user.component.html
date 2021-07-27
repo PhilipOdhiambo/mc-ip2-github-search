@@ -1,12 +1,16 @@
 <div class="container">
-    <h3>Search github users by name to get valuable information</h3>
+
+    <h2>Search github users by name to get valuable information</h2>
+    <p class="intro">Enter a user login name to find their details.</p>
+    <p class="intro">You can find multiple users and see a user detail when you click on their name.</p>
+
 
     <app-search-form></app-search-form>
 
-    <div class="grid-container">
+    <div *ngIf="users[0]" class="grid-container">
 
-        <div class="grid-item grid-item-users">
-            <h3>Users List</h3>
+        <div  class="grid-item grid-item-users">
+            <h3 style="color: black;">Users List</h3>
             <ul>
                 <li *ngFor="let user of users;let i=index" (click)="updateActiveUser(i)">
                     <p>{{user.userName}}</p>                    

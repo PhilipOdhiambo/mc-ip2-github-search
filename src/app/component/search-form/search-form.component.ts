@@ -35,6 +35,8 @@ export class SearchFormComponent implements OnInit {
   
       
     }, err => {
+      alert("The user name does not exist!!")
+      setTimeout(()=> this.myform.resetForm() ,0)
 
     })         
   }
