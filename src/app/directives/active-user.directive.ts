@@ -6,7 +6,9 @@ import { Directive, ElementRef } from '@angular/core';
 export class ActiveUserDirective {
 
   constructor(private elem:ElementRef) { 
-    this.elem.nativeElement.backgroundColor ="blue"
+    this.elem.nativeElement.style.backgroundColor='blue'
+    this.elem.nativeElement.style.color='white'
+
   }
 
 }

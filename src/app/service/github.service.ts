@@ -20,7 +20,7 @@ export class GithubService {
   }
 
   getUser(user:string):Observable<IGithubUser> {
-    let url = `https://api.github.com/users/${user}?access_token=${environment.apiKey}`
+    let url = `https://api.github.com/users/${user}`
     return this.http.get<IGithubUser>(url)
   }
 
