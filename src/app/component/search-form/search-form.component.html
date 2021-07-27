@@ -1,16 +1,8 @@
 <form #myform="ngForm">
-
-    <mat-form-field class="form-field" appearance="fill">
-        <mat-label>Github user name:</mat-label>
-
-        <input #search matInput type="text" [(ngModel)]="value" name="search">
-
-        <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-          <mat-icon>close</mat-icon>
-        </button>
-
-      </mat-form-field>
-
-      <button mat-button color="primary" (click)="onSubmit()">Search</button>
+  <div class="form-field">
+    <mat-label class="label">Github Login Name :</mat-label>
+    <input #search type="text" [(ngModel)]="value" name="search" placeholder="Enter user login name..">
+    <button style="background-color: #3f51b5;color: white;" (click)="onSubmit()">FIND</button>
+  </div>
 
 </form>

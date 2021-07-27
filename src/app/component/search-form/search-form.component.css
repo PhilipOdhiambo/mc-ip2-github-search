@@ -1,3 +1,26 @@
-.form-field {
-    width: 200px;
+.form-field{
+    /* width: 200px; */
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.26);
+    width:fit-content;
+    text-align: center;
   }
+
+  .form-field input {
+    margin: 1rem;
+    padding: .2rem;
+    background-color: rgba(255, 255, 255, 0.818);
+    border: none;
+  }
+
+  .form-field input:focus {
+    outline: none;
+  }
+
+  .form-field button {
+    padding: .5rem 2rem;
+    border-radius: 5px;
+    border: none;
+  }
+
